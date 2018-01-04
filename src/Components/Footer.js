@@ -5,7 +5,7 @@ const Footer = () => {
         <div className='row'>
             <div className='col footer'>
                 <div className='text-center attribution'>
-                <a href='http://marvel.com'>Data provided by Marvel. © 2018 MARVEL</a>
+                <a href='http://marvel.com' target='_blank'>Data provided by Marvel. © 2018 MARVEL</a>
                 </div>
             </div>
         </div>

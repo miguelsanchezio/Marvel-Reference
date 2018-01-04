@@ -1,12 +1,23 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+
 import CharacterCard from './CharacterCard';
 import EventCard from './EventCard';
 
 class CharacterInfo extends Component {
+    componentDidMount() {
+        this.props.fetchCharacter(this.props.characterQuery);
+    }
+
     render() {
+
+        const characterCard = <CharacterCard info={this.props.characterInfo}/>;
+        const noCharacterCard = <div className='loading'>Loading...</div>
+        
         return (
             <div>
-                <CharacterCard/>
+                {this.props.characterInfo.name ? characterCard : noCharacterCard}
 
                 <div className='row justify-content-center'>
                     <div className='col-8 text-center'>
@@ -21,6 +32,10 @@ class CharacterInfo extends Component {
                             <EventCard/>
                             <EventCard/>
                             <EventCard/>
+                            <EventCard/>
+                            <EventCard/>
+                            <EventCard/>
+                            <EventCard/>
                         </div>
                     </div>
                 </div>
@@ -29,4 +44,8 @@ class CharacterInfo extends Component {
     }
 }
 
-export default CharacterInfo;
+function mapStateToProps({ characterQuery, characterInfo }) {
+    return { characterQuery, characterInfo};
+}
+
+export default connect(mapStateToProps, actions)(CharacterInfo);

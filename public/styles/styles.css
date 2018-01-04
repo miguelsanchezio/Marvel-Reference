@@ -132,6 +132,14 @@ a:hover {
     text-decoration: none;
 }
 
+/* LOADING */
+.loading {
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    margin: 15px 0;
+}
+
 /* CHARACTER CARD */
 .character-card {
     border-top: 20px solid #AC0000;
@@ -206,6 +214,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between
 }
+
 /* EVENT CARD */
 .event-card {
     border-top: 10px solid #AC0000;
