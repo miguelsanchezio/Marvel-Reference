@@ -12,7 +12,13 @@ body {
     line-height: 1.5;
     color: #777;
     font-weight: 400;
+    background-color: #32363C;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
 
 .container-fluid {
     background: url('../img/background-transparent.png'), #32363C;
@@ -28,10 +34,17 @@ body {
 }
 
 .header h1 {
-    color: #fff;
     padding: 15px 0;
     font-size: 3em;
+}
+
+.brand-logo {
+    color: #fff;
     font-weight: 800;
+}
+
+.brand-logo:hover {
+    color: #fff;
 }
 
 /* SEARCHBAR */
@@ -90,24 +103,23 @@ body {
     color: #AC0000;
 }
 
-button {
+.button {
     width: 20%;
     padding: 10px;
     background: #AC0000;
     color: #fff;
-    border: none;
     outline: none;
     transition: .5s;
     border: 1px solid #AC0000;
 }
 
-button:hover {
+.button:hover {
     background: #850000;
 }
 
 /* FOOTER */
 .footer {
-    margin-top: 30px;
+    margin: 20px 0;
 }
 
 .attribution a {
@@ -118,4 +130,115 @@ button:hover {
 
 .attribution a:hover {
     text-decoration: none;
+}
+
+/* CHARACTER CARD */
+.character-card {
+    border-top: 20px solid #AC0000;
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    width: 100%;
+}
+
+.character-main-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.character-img {
+    width: 30%;
+}
+
+.character-img img {
+    width: 100%;
+}
+
+.character-name {
+    color: #AC0000;
+    font-weight: 800;
+}
+
+.character-summary {
+    width: 67%;
+    margin-bottom: 20px;
+}
+
+.character-appearances {
+    font-size: .85em;
+    font-weight: 800;
+}
+
+.appearances-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: .85em;
+}
+
+.character-side-info {
+    background-color: #E5E5E5;
+    padding: 8px;
+    font-size: .8em;
+    text-align: center;
+}
+
+.character-find-out-a {
+    color: #AC0000;
+    transition: .5s;
+}
+
+.character-find-out-a:hover {
+    text-decoration: none;
+    color: #850000;
+}
+
+.c-info-h3 {
+    margin: 25px 0;
+    font-weight: 800;
+    color: #fff;
+}
+
+.events-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+/* EVENT CARD */
+.event-card {
+    border-top: 10px solid #AC0000;
+    padding: 12px;
+    background: #fff;
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.event-img {
+    width: 30%;
+}
+
+.event-img img {
+    width: 100%;
+}
+
+.event-name {
+    color: #AC0000;
+    font-weight: 800;
+}
+
+.event-summary {
+    width: 67%;
+}
+
+.event-summary-p {
+    font-size: .8em;
+    margin-bottom: 0;
 }

@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import Autosuggest from 'react-autosuggest';
+import { Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+
 import characterInfo from '../data/characterInfo.json'
+
 
 const getSuggestions = value => {
     const inputValue = value.trim().toLowerCase();
@@ -35,6 +40,7 @@ class SearchBar extends Component {
         this.setState({
             value: newValue
         });
+        this.props.setCharacter(newValue);
     }
 
     onSuggestionsFetchRequested = ({ value }) => {
@@ -72,7 +78,15 @@ class SearchBar extends Component {
                             renderSuggestion={renderSuggestion}
                             inputProps={inputProps}
                         />
-                        <button type="button" className='button'>Search</button>
+                        <Route render={({ history }) => (
+                            <button
+                                type="button"
+                                className='button'
+                                onClick={() => { history.push('/characterinfo') }}
+                            >
+                                Search
+                            </button>
+                        )}/>
                     </div>
                 </div>
 			</div>
@@ -80,4 +94,4 @@ class SearchBar extends Component {
 	}
 }
 
-export default SearchBar;
+export default connect(null, actions)(SearchBar);
