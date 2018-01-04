@@ -1,0 +1,73 @@
+/* background color #32363C, #AC0000; */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #777;
+    font-weight: 400;
+}
+
+.container-fluid {
+    background: url('../img/background-transparent.png'), #32363C;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header {
+    background-color: #AC0000;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #fff;
+    padding: 15px 0;
+    font-size: 3em;
+    font-weight: 800;
+}
+
+label {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+input[type=text] { 
+    background: #32363C;
+    border-color: #AC0000;
+}
+
+input[type=text]:focus { 
+    background: #32363C;
+    border-color: #AC0000;
+}
+
+.btn {
+    background-color: #AC0000;
+    border-color: #AC0000;
+}
+
+.btn:hover {
+    background-color: #940000;
+    border-color: #AC0000;
+}
+
+.footer {
+    margin-top: 30px;
+}
+
+.attribution a {
+    color: #fff;
+    font-size: .85em;
+    opacity: .8;
+}
+
+.attribution a:hover {
+    text-decoration: none;
+}
