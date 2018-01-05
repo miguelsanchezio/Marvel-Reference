@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Autosuggest from 'react-autosuggest';
-import { withRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
@@ -26,14 +26,6 @@ const renderSuggestion = suggestion => {
     )
 }
 
-const renderInputComponent = inputProps => {
-    return (
-        <div>
-            <input {...inputProps} type='text'/>
-        </div>
-    )
-}
-
 class SearchBar extends Component {
     constructor() {
         super();
@@ -42,8 +34,6 @@ class SearchBar extends Component {
             value: '',
             suggestions: []
         };
-
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -70,12 +60,6 @@ class SearchBar extends Component {
         });
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Submit');
-        this.props.history.push('/characterpage');
-    }
-
 	render() {
         const { value, suggestions } = this.state;
 
@@ -88,24 +72,31 @@ class SearchBar extends Component {
 		return (
 			<div className='row justify-content-center'>
 				<div className='col-8'>
-                    <form onSubmit={this.handleSubmit}>
-                        <label className='label'>Search a character</label>
-                        <div className='input-group'>
-                            <Autosuggest
-                                suggestions={suggestions}
-                                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-                                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-                                getSuggestionValue={getSuggestionValue}
-                                renderSuggestion={renderSuggestion}
-                                inputProps={inputProps}
-                            />
-                            <button className='button'>Search</button>
-                        </div>
-                    </form>
+                    <span className='label'>Search Character</span>
+                    <div className='input-group'>
+                        <Autosuggest
+                            className='form-control'
+                            suggestions={suggestions}
+                            onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                            onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                            getSuggestionValue={getSuggestionValue}
+                            renderSuggestion={renderSuggestion}
+                            inputProps={inputProps}
+                        />
+                        <Route render={({ history }) => (
+                            <button
+                                type="button"
+                                className='button'
+                                onClick={() => { history.push('/characterpage') }}
+                            >
+                                Search
+                            </button>
+                        )}/>
+                    </div>
                 </div>
 			</div>
 		)
 	}
 }
 
-export default connect(null, actions)(withRouter(SearchBar));
+export default connect(null, actions)(SearchBar);
