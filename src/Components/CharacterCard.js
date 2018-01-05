@@ -8,7 +8,7 @@ class CharacterCard extends Component {
 
         return (
             <div className='row justify-content-center'>
-                <div className='col-8'>
+                {/* <div className='col-8'> */}
                     <div className='character-card'>
                         <div className='character-main-info'>
                             <div className='character-img'>
@@ -34,7 +34,7 @@ class CharacterCard extends Component {
                             <a href={info.comicsLink} target='_blank' className='character-find-out-a'>{info.name} Comics</a>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         )
     }

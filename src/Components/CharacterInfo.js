@@ -41,10 +41,8 @@ class CharacterInfo extends Component {
                 </div>
 
                 <div className='row justify-content-center'>
-                    <div className='col-8'>
-                        <div className='events-container'>
-                            {eventCards}
-                        </div>
+                    <div className='events-container'>
+                        {eventCards}
                     </div>
                 </div>
             </div>

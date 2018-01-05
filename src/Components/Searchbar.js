@@ -80,7 +80,7 @@ class SearchBar extends Component {
 
 		return (
 			<div className='row justify-content-center'>
-				<div className='col-8'>
+				<div className='form-container'>
                     <form onSubmit={this.handleSubmit}>
                         <label className='label'>Search a character</label>
                         <div className='input-group'>

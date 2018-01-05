@@ -48,6 +48,9 @@ a:hover {
 }
 
 /* SEARCHBAR */
+.form-container {
+    width: 80%;
+}
 .label {
     color: #fff;
     font-size: 1.5em;
@@ -59,7 +62,6 @@ a:hover {
     display: flex;
     align-items: flex-start;
     width: 100%;
-    max-width: 800px;
 }
 
 .react-autosuggest__container {
@@ -162,7 +164,7 @@ a:hover {
     margin: 20px 0;
     padding: 20px;
     background: #fff;
-    width: 100%;
+    width: 80%;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -238,7 +240,9 @@ a:hover {
     color: #fff;
 }
 
+/* EVENTS CONTAINER */
 .events-container {
+    width: 80%;
     margin-top: 10px;
     display: flex;
     flex-direction: row;
@@ -249,9 +253,9 @@ a:hover {
 /* EVENT CARD */
 .event-card {
     border-top: 10px solid #AC0000;
-    padding: 12px;
+    padding: 20px;
     background: #fff;
-    width: 48%;
+    width: 49%;
     margin-bottom: 20px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     display: flex;
@@ -321,4 +325,46 @@ a:hover {
 .event-find-out-a:hover {
     text-decoration: none;
     color: #850000;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+    .event-info {
+        flex-direction: column;
+    }
+    .event-card {
+        margin-bottom: 15px;
+    }
+    .event-img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .event-summary {
+        width: 100%;
+    }
+    /* .events-container {
+        flex-direction: column;
+    }
+    .event-card {
+        width: 100%;
+    } */
+}
+
+@media (max-width: 500px) {
+    .character-main-info {
+        flex-direction: column;
+    }
+    .character-img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .character-summary {
+        width: 100%;
+    }
+    .events-container {
+        flex-direction: column;
+    }
+    .event-card {
+        width: 100%;
+    }
 }

@@ -6,6 +6,7 @@ class EventCard extends Component {
 
         return (
             <div className='event-card'>
+            {console.log(info)}
                 <div className='event-info'>
                     <div className='event-img'>
                         <img src={info.imgUrl} alt={info.name}/>
