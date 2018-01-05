@@ -1,2 +1,3 @@
 export const SET_CHARACTER = 'SET_CHARACTER';
 export const FETCH_CHARACTER = 'FETCH_CHARACTER';
+export const FETCH_EVENTS = 'FETCH_EVENTS';

@@ -1,10 +1,10 @@
 import axios from 'axios';
 import characterInfo from '../data/characterInfo.json'
-import { SET_CHARACTER, FETCH_CHARACTER } from './types';
+import { SET_CHARACTER, FETCH_CHARACTER, FETCH_EVENTS } from './types';
 
 export const setCharacter = character => {
     const characterQuery = characterInfo.filter(name => {
-        return name.name === character;
+        return name.name.toLowerCase() === character.toLowerCase();
     });
 
     return {
@@ -41,4 +41,37 @@ export const fetchCharacter = (id) => async dispatch => {
     }
 
     dispatch({ type: FETCH_CHARACTER, payload: characterInfo });
+}
+
+export const fetchEvents = (characterId) => async dispatch => {
+    const url = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/events?limit=50&ts=2018&apikey=7dfb3087b3b2cdf9659302cc4f49729a&hash=349406ee84f2680659ebcdf5f2168c6b`
+
+    const res = await axios.get(url);
+    const events = res.data.data.results;
+    const eventsInfo = events.map(event => {
+        let wikiLink;
+        if(!event.urls[1]) {
+            wikiLink = 'https://marvel.com';
+        } else {
+            wikiLink = event.urls[1].url;
+        }
+        
+        return {
+            id: event.id,
+            title: event.title,
+            imgUrl: `${event.thumbnail.path}.jpg`,
+            description: event.description,
+            detailLink: event.urls[0].url,
+            wikiLink,
+            creatorsNumber: event.creators.available,
+            charactersNumber: event.characters.available,
+            storiesNumber: event.stories.available,
+            comicsNumber: event.comics.available,
+            seriesNumber: event.series.available,
+            nextEvent: event.next.name,
+            prevEvent: event.previous.name
+        }
+    })
+
+    dispatch({ type: FETCH_EVENTS , payload: eventsInfo });
 }

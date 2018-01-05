@@ -213,7 +213,7 @@ a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 /* EVENT CARD */
@@ -224,6 +224,9 @@ a:hover {
     width: 48%;
     margin-bottom: 20px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .event-info {
@@ -250,6 +253,42 @@ a:hover {
 }
 
 .event-summary-p {
+    font-size: .9em;
+    margin-bottom: 8px;
+}
+
+.event-misc {
+    font-weight: 800;
     font-size: .8em;
-    margin-bottom: 0;
+}
+
+.event-misc-p {
+    font-size: .8em;
+    margin: 0;
+}
+
+.event-numbers-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: .8em;
+}
+
+.event-side-info {
+    margin-top: 15px;
+    background-color: #E5E5E5;
+    padding: 6px;
+    font-size: .8em;
+    text-align: center;
+}
+
+
+.event-find-out-a {
+    color: #AC0000;
+    transition: .5s;
+}
+
+.event-find-out-a:hover {
+    text-decoration: none;
+    color: #850000;
 }
