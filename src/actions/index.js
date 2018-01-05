@@ -3,13 +3,27 @@ import characterInfo from '../data/characterInfo.json'
 import { SET_CHARACTER, FETCH_CHARACTER, FETCH_EVENTS } from './types';
 
 export const setCharacter = character => {
-    const characterQuery = characterInfo.filter(name => {
-        return name.name.toLowerCase() === character.toLowerCase();
+    const characterQuery = characterInfo.filter(info => {
+        return info.name.toLowerCase() === character.toLowerCase();
     });
 
     return {
         type: SET_CHARACTER,
         payload: characterQuery
+    }
+}
+
+export const clearCharacter = () => {
+    return {
+        type: FETCH_CHARACTER,
+        payload: []
+    }
+}
+
+export const clearEvents = () => {
+    return {
+        type: FETCH_EVENTS,
+        payload: []
     }
 }
 
@@ -54,6 +68,20 @@ export const fetchEvents = (characterId) => async dispatch => {
         } else {
             wikiLink = event.urls[1].url;
         }
+
+        let nextEvent;
+        if(!event.next) {
+            nextEvent = 'To be announced';
+        } else {
+            nextEvent = event.next.name;
+        }
+
+        let prevEvent;
+        if(!event.previous) {
+            prevEvent = 'No previous event';
+        } else {
+            prevEvent = event.previous.name;
+        }
         
         return {
             id: event.id,
@@ -67,8 +95,8 @@ export const fetchEvents = (characterId) => async dispatch => {
             storiesNumber: event.stories.available,
             comicsNumber: event.comics.available,
             seriesNumber: event.series.available,
-            nextEvent: event.next.name,
-            prevEvent: event.previous.name
+            nextEvent,
+            prevEvent
         }
     })
 

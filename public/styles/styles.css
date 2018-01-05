@@ -140,10 +140,26 @@ a:hover {
     margin: 15px 0;
 }
 
+/* NOT FOUND LINK */
+.not-found-link {
+    color: #fff;
+    padding: 10px 15px;
+    background: #AC0000;
+    border: 1px solid #AC0000;
+    transition: .5s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.not-found-link:hover {
+    color: #fff;
+    background: #850000;
+}
+
 /* CHARACTER CARD */
 .character-card {
     border-top: 20px solid #AC0000;
-    margin-top: 20px;
+    margin: 20px 0;
     padding: 20px;
     background: #fff;
     width: 100%;
@@ -204,12 +220,12 @@ a:hover {
 }
 
 .c-info-h3 {
-    margin: 25px 0;
     font-weight: 800;
     color: #fff;
 }
 
 .events-container {
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

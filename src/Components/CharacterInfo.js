@@ -27,7 +27,6 @@ class CharacterInfo extends Component {
         
         return (
             <div>
-                {console.log(this.props.eventsInfo)}
                 {this.props.characterInfo.name ? characterCard : noCharacterCard}
 
                 <div className='row justify-content-center'>
@@ -44,7 +43,7 @@ class CharacterInfo extends Component {
                 <div className='row justify-content-center'>
                     <div className='col-8'>
                         <div className='events-container'>
-                            {this.props.eventsInfo ? eventCards : noEventCards}
+                            {eventCards}
                         </div>
                     </div>
                 </div>

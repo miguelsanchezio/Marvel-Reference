@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='row'>
+        <div className='row align-items-end'>
             <div className='col footer'>
                 <div className='text-center attribution'>
                 <a href='http://marvel.com' target='_blank'>Data provided by Marvel. © 2018 MARVEL</a>

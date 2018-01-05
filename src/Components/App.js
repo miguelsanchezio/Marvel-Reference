@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './Header';
 import SearchBar from './Searchbar';
 import Footer from './Footer';
-import CharacterInfo from './CharacterInfo';
+import CharacterPage from './CharacterPage';
 
 class App extends Component {
     render() {
@@ -12,7 +12,7 @@ class App extends Component {
                 <div className="container-fluid">
                     <Header/>
                     <Route exact path='/' component={SearchBar}/>
-                    <Route exact path='/characterinfo' component={CharacterInfo}/>
+                    <Route exact path='/characterpage' component={CharacterPage}/>
                     <Footer/>
                 </div>
             </BrowserRouter>

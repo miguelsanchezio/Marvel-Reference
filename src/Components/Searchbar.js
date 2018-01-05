@@ -36,6 +36,11 @@ class SearchBar extends Component {
         };
     }
 
+    componentDidMount() {
+        this.props.clearCharacter();
+        this.props.clearEvents();
+    }
+
     onChange = (event, { newValue }) => {
         this.setState({
             value: newValue
@@ -82,7 +87,7 @@ class SearchBar extends Component {
                             <button
                                 type="button"
                                 className='button'
-                                onClick={() => { history.push('/characterinfo') }}
+                                onClick={() => { history.push('/characterpage') }}
                             >
                                 Search
                             </button>
