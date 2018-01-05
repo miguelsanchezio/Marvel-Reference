@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+
 
 class CharacterCard extends Component {
     render() {
@@ -22,6 +24,7 @@ class CharacterCard extends Component {
                                     <li>{info.storiesNumber > 0 ? info.storiesNumber : 0} stories</li>
                                     <li>{info.eventsNumber > 0 ? info.eventsNumber : 0} events</li>
                                 </ul>
+                                <Link to='/' className='character-card-a'>Go Back</Link>
                             </div>
                         </div>
                         <div className='character-side-info'>

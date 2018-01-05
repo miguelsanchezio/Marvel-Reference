@@ -32,8 +32,8 @@ class CharacterInfo extends Component {
                 <div className='row justify-content-center'>
                     <div className='col-8 text-center'>
                         <h3 className='c-info-h3'>
-                            {this.props.characterInfo.name}
-                            {this.props.eventsInfo.length === 0
+                            {console.log(this.props.eventsInfo)}
+                            {this.props.characterInfo.name}                            {this.props.eventsInfo.length === 0
                                 ? ' has not appeared in any events.'
                                 : ` has appeared in ${this.props.eventsInfo.length} events.`}
                         </h3>

@@ -13,6 +13,13 @@ export const setCharacter = character => {
     }
 }
 
+export const unsetCharacter = () => {
+    return {
+        type: SET_CHARACTER,
+        payload: null
+    }
+}
+
 export const clearCharacter = () => {
     return {
         type: FETCH_CHARACTER,

@@ -26,14 +26,6 @@ const renderSuggestion = suggestion => {
     )
 }
 
-const renderInputComponent = inputProps => {
-    return (
-        <div>
-            <input {...inputProps} type='text'/>
-        </div>
-    )
-}
-
 class SearchBar extends Component {
     constructor() {
         super();
@@ -47,6 +39,7 @@ class SearchBar extends Component {
     }
 
     componentDidMount() {
+        this.props.unsetCharacter()
         this.props.clearCharacter();
         this.props.clearEvents();
     }

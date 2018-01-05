@@ -201,6 +201,20 @@ a:hover {
     font-size: .85em;
 }
 
+.character-card-a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: .85em;
+    color: #AC0000;
+    transition: .5s;
+    text-align: right;
+}
+
+.character-card-hover {
+    font-size: .85em;
+    color: #850000;
+}
+
 .character-side-info {
     margin-top: 20px;
     background-color: #E5E5E5;
