@@ -18,11 +18,11 @@ export const fetchCharacter = (id) => async dispatch => {
 
     const res = await axios.get(url);
 
-    let comicUrl;
+    let comicsLink;
     if(!res.data.data.results[0].urls[2]) {
-        comicUrl = 'https://marvel.com';
+        comicsLink = 'https://marvel.com';
     } else {
-        comicUrl = res.data.data.results[0].urls[2].url;
+        comicsLink = res.data.data.results[0].urls[2].url;
     }
 
     const characterInfo = {
@@ -36,8 +36,7 @@ export const fetchCharacter = (id) => async dispatch => {
         eventsNumber: res.data.data.results[0].events.available,
         marvelLink: res.data.data.results[0].urls[0].url,
         wikiLink: res.data.data.results[0].urls[1].url,
-        comicsLink: comicUrl
-        // res.data.data.results[0].urls[2].url
+        comicsLink
     }
 
     dispatch({ type: FETCH_CHARACTER, payload: characterInfo });
