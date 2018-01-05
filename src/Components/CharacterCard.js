@@ -14,7 +14,7 @@ class CharacterCard extends Component {
                             </div>
                             <div className='character-summary'>
                                 <h2 className='character-name'>{info.name}</h2>
-                                <p>{info.description}</p>
+                                <p>{info.description !== '' ? info.description : `No description available. Find out more about ${info.name} by clicking on the links below.`}</p>
                                 <span className='character-appearances'>Number of appearances</span>
                                 <ul className='appearances-list'>
                                     <li>{info.comicsNumber > 0 ? info.comicsNumber : 0} comics</li>

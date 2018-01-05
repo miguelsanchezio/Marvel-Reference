@@ -7,7 +7,7 @@ import EventCard from './EventCard';
 
 class CharacterInfo extends Component {
     componentDidMount() {
-        this.props.fetchCharacter(this.props.characterQuery);
+        this.props.fetchCharacter(this.props.characterQuery[0].id);
     }
 
     render() {
