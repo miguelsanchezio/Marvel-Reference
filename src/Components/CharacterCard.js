@@ -12,7 +12,7 @@ class CharacterCard extends Component {
                     <div className='character-card'>
                         <div className='character-main-info'>
                             <div className='character-img'>
-                                <img src={`https://${info.imgUrl}`} alt={info.name}/>
+                                <img src={info.imgUrl} alt={info.name}/>
                             </div>
                             <div className='character-summary'>
                                 <h2 className='character-name'>{info.name}</h2>
