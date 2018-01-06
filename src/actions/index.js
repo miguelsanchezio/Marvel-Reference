@@ -35,7 +35,7 @@ export const clearEvents = () => {
 }
 
 export const fetchCharacter = (id) => async dispatch => {
-    const url = `https://gateway.marvel.com:443/v1/public/characters/${id}?ts=2018&apikey=7dfb3087b3b2cdf9659302cc4f49729a&hash=349406ee84f2680659ebcdf5f2168c6b`
+    const url = `https://gateway.marvel.com:443/v1/public/characters/${id}?${process.env.REACT_APP_API_URL}`
 
     const res = await axios.get(url);
 
@@ -64,7 +64,7 @@ export const fetchCharacter = (id) => async dispatch => {
 }
 
 export const fetchEvents = (characterId) => async dispatch => {
-    const url = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/events?limit=50&ts=2018&apikey=7dfb3087b3b2cdf9659302cc4f49729a&hash=349406ee84f2680659ebcdf5f2168c6b`
+    const url = `https://gateway.marvel.com:443/v1/public/characters/${characterId}/events?limit=50&${process.env.REACT_APP_API_URL}`
 
     const res = await axios.get(url);
     const events = res.data.data.results;
