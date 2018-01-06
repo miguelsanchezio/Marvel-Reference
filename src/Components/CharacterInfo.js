@@ -17,7 +17,6 @@ class CharacterInfo extends Component {
         const noCharacterCard = <div className='loading'>Loading...</div>
         const characterCard = <CharacterCard info={this.props.characterInfo}/>;
         
-        const noEventCards = <div className='loading'>Loading...</div>
         const events = this.props.eventsInfo;
         const eventCards = events.map(event => {
             return (
@@ -32,10 +31,9 @@ class CharacterInfo extends Component {
                 <div className='row justify-content-center'>
                     <div className='col-8 text-center'>
                         <h3 className='c-info-h3'>
-                            {console.log(this.props.eventsInfo)}
                             {this.props.characterInfo.name}                            {this.props.eventsInfo.length === 0
                                 ? ' has not appeared in any events.'
-                                : ` has appeared in ${this.props.eventsInfo.length} events.`}
+                                : ` has appeared in ${this.props.eventsInfo.length} event(s).`}
                         </h3>
                     </div>
                 </div>

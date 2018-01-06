@@ -65,8 +65,7 @@ class SearchBar extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Submit');
-        this.props.history.push('/characterpage');
+        this.props.history.push(`/characterpage`);
     }
 
 	render() {

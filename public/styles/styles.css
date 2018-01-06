@@ -51,6 +51,7 @@ a:hover {
 .form-container {
     width: 80%;
 }
+
 .label {
     color: #fff;
     font-size: 1.5em;
@@ -113,6 +114,7 @@ a:hover {
     outline: none;
     transition: .5s;
     border: 1px solid #AC0000;
+    text-align: center;
 }
 
 .button:hover {
@@ -124,14 +126,15 @@ a:hover {
     margin: 20px 0;
 }
 
+.created-by a {
+    color: #fff;
+    font-size: 1em;
+}
+
 .attribution a {
     color: #fff;
     font-size: .85em;
-    opacity: .8;
-}
-
-.attribution a:hover {
-    text-decoration: none;
+    opacity: .6;
 }
 
 /* LOADING */

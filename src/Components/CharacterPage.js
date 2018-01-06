@@ -12,7 +12,7 @@ class CharacterPage extends Component {
                     <h3 className='c-info-h3'>
                         Character not found. Try again.
                     </h3>
-                    <Link to='/' className='not-found-link'>Search for a different character</Link>
+                    <Link to='/' className='not-found-link'>Search again</Link>
                 </div>
             </div>
         )

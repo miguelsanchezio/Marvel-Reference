@@ -6,7 +6,7 @@ const Header = () => {
         <div className='row'>
             <div className='col header'>
                 <h1 className='text-center'>
-                    <Link to='/' className='brand-logo'>Marvel App</Link>
+                    <Link to='/' className='brand-logo'>Marvel Reference</Link>
                 </h1>
             </div>
         </div>

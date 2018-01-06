@@ -12,7 +12,7 @@ class App extends Component {
                 <div className="container-fluid">
                     <Header/>
                     <Route exact path='/' component={SearchBar}/>
-                    <Route exact path='/characterpage' component={CharacterPage}/>
+                    <Route exact path='/characterpage/' component={CharacterPage}/>
                     <Footer/>
                 </div>
             </BrowserRouter>
