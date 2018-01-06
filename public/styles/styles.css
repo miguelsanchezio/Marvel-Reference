@@ -74,6 +74,7 @@ a:hover {
 .react-autosuggest__input {
     width: 100%;
     background: #32363C;
+    border-radius: 0;
     border: 1px solid #AC0000;
     font-size: 1em;
     padding: 10px;
