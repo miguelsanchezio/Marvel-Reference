@@ -1,6 +1,6 @@
 {
-  "name": "marvelapp",
-  "version": "0.1.0",
+  "name": "marvel-reference-app",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
