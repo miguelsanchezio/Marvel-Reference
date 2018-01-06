@@ -8,7 +8,7 @@ class EventCard extends Component {
             <div className='event-card'>
                 <div className='event-info'>
                     <div className='event-img'>
-                        <img src={info.imgUrl} alt={info.name}/>
+                        <img src={`https://${info.imgUrl}`} alt={info.name}/>
                     </div>
                     <div className='event-summary'>
                         <h4 className='event-name'>{info.title}</h4>
